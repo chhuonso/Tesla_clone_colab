@@ -1,8 +1,14 @@
-import React from 'react'
 
+import SolarRoofNav from '../../components/SolarRoofComponent/SolarRoofNav'
+import LandingPage from '../../components/SolarRoofComponent/Landing'
+import SecondPage from '../../components/SolarRoofComponent/SecondPage'
 const SolarRoof = () => {
   return (
-    <div>SolarRoof</div>
+    <div>
+      <SolarRoofNav/>
+      <LandingPage />
+      <SecondPage />
+    </div>
   )
 }
 

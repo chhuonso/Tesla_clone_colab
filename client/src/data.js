@@ -131,3 +131,18 @@ export const menuList = [
     },
     
 ]
+
+export const solarRoofLink = [
+    {
+        title: 'Schedule a Callback',
+        path: "/callback"
+    },
+    {
+        title: "Support",
+        path: "/support/energy"
+    },
+    {
+        title: "Order Solar Roof",
+        path: "/energy/design"
+    }
+]
