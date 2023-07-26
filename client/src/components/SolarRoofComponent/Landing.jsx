@@ -1,14 +1,38 @@
-import React from 'react'
-import SolarLogo from '../../images/solar-panel.jpg'
+import SolarLogoDesktop from '../../images/solarRoofImages/Solar-Roof-Hero-Desktop.avif'
+import SolarLogoMobil from '../../images/solarRoofImages/solar-roof-home-small.avif'
+import SolarLogoMedium from '../../images/solarRoofImages/solar-roof-home-desktop.avif'
 import { GiSolarPower } from 'react-icons/gi'
+import { useRef, useEffect, useState } from 'react'
 import { BsArrowDownShort } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 const Landing = () => {
+    const imageRef = useRef(null)
+    
+    // Changes the image on different screen sizes
+    useEffect(() => {
+        const updateImage = () => {
+            const screenWidth = window.innerWidth
+            const backgroundImage = screenWidth >= 900 ? SolarLogoDesktop : SolarLogoMobil
+            imageRef.current.style.backgroundImage = `url(${backgroundImage})`
+            imageRef.current.style.backgroundPosition = 'center'
+            imageRef.current.style.backgroundSize = 'cover'
+            imageRef.current.style.backgroundRepeat = 'no-repeat'
+        }
+        updateImage()
+
+        window.addEventListener('resize', updateImage)
+
+        // Clean up function
+        return () => {
+            window.removeEventListener('resize', updateImage)
+        }
+    }, [])
+
     return (
         <div>
-            <div className='h-screen bg-cover bg-center flex flex-col  justify-around' style={{ backgroundImage: `url(${SolarLogo})` }}>
+            <div className='h-screen flex flex-col justify-around' ref={imageRef}>
                 <div className='relative text-center'>
-                    <h1 className='text-4xl font-bold '>Solar Roof</h1>
+                    <h1 className='text-4xl font-bold text-white'>Solar Roof</h1>
                 </div>
                 <div className='flex items-center justify-center relative top-[7.9rem]'>
                     <div className='grid grid-cols-3 lg:grid-cols-4 gap-4'>
