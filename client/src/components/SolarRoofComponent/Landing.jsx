@@ -1,6 +1,7 @@
 import React from 'react'
 import SolarLogo from '../../images/solar-panel.jpg'
 import { GiSolarPower } from 'react-icons/gi'
+import { BsArrowDownShort } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 const Landing = () => {
     return (
@@ -12,8 +13,8 @@ const Landing = () => {
                 <div className='flex items-center justify-center relative top-[7.9rem]'>
                     <div className='grid grid-cols-3 lg:grid-cols-4 gap-4'>
                         <div className='flex flex-col items-center text-white h-24'>
-                        
-                                <GiSolarPower className='text-[38px]' />
+
+                            <GiSolarPower className='text-[38px]' />
                             <p className='text-[12px] font-bold'>Beautiful</p>
                             <p className='text-[12px] font-bold'>Solar</p>
                         </div>

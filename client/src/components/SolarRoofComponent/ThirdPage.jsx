@@ -3,8 +3,9 @@ import ImageThree from '../../images/solor-roof-with-car.jpeg'
 import { Link } from 'react-router-dom'
 const ThirdPage = () => {
     return (
+        // Mobile devices
         <div className='h-screen w-full '>
-            <div className=''>
+            <div>
                 <img src='https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Solar-Roof-Energy-Desktop-Global' alt="solar roof image"
                     style={{
                         left: '0', // Set the left position to center the image horizontally
@@ -42,7 +43,7 @@ const ThirdPage = () => {
                     <div className='hidden lg:flex lg:flex-col items-start lg:h-[95%]'>
                         <p className='text-[17px] text-main'>Energy Storage</p>
                         <p className='text-[22px] text-main xl:text-[28px]'>Protection Against<br></br>Outages</p>
-                        <p className='text-[14px] text-primary'>Powerwall is a compact home battery that is bundled with Solar Roof, providing you with 24/7 energy security. It stores the energy you produce with Solar Roof so you can power your home anytime—at night or during an outage.</p>
+                        <p className='text-[14px] text-primary mt-3'>Powerwall is a compact home battery that is bundled with Solar Roof, providing you with 24/7 energy security. It stores the energy you produce with Solar Roof so you can power your home anytime—at night or during an outage.</p>
                         <div className='mt-auto flex flex-col items-center justify-center space-y-5 w-full'>
                             <Link to='/'>
                                 <button className='border-[3px] rounded border-black  w-[350px]   h-10 text-[14px] text-main font-bold'>
