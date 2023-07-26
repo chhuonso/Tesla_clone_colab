@@ -5,6 +5,7 @@ import ThirdPage from '../../components/SolarRoofComponent/ThirdPage'
 import FourthPage from '../../components/SolarRoofComponent/FourthPage'
 import Efficiency from '../../components/SolarRoofComponent/Efficiency'
 import Control from '../../components/SolarRoofComponent/Control'
+import Installation from '../../components/SolarRoofComponent/Installation'
 const SolarRoof = () => {
   return (
     <>
@@ -13,8 +14,10 @@ const SolarRoof = () => {
       <SecondPage />
       <ThirdPage />
       <FourthPage />
+      <Installation />
       <Efficiency />
       <Control />
+
     </>
   )
 }

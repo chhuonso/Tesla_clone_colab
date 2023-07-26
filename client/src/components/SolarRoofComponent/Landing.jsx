@@ -1,8 +1,7 @@
 import SolarLogoDesktop from '../../images/solarRoofImages/Solar-Roof-Hero-Desktop.avif'
 import SolarLogoMobil from '../../images/solarRoofImages/solar-roof-home-small.avif'
-import SolarLogoMedium from '../../images/solarRoofImages/solar-roof-home-desktop.avif'
 import { GiSolarPower } from 'react-icons/gi'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect } from 'react'
 import { BsArrowDownShort } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 const Landing = () => {
@@ -18,11 +17,13 @@ const Landing = () => {
             imageRef.current.style.backgroundSize = 'cover'
             imageRef.current.style.backgroundRepeat = 'no-repeat'
         }
+        // Need to call the function
         updateImage()
 
+        // Attach it as a call back function to event 
         window.addEventListener('resize', updateImage)
 
-        // Clean up function
+        // Clean up function to remove 
         return () => {
             window.removeEventListener('resize', updateImage)
         }

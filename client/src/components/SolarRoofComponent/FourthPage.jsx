@@ -14,7 +14,7 @@ const FourthPage = () => {
                     }}
                     className='h-[500px] lg:h-[570px] w-full lg:hidden' />
             </div>
-            <div className='flex flex-col px-4 pt-4 lg:hidden'>
+            <div className='flex flex-col px-4 sm:pt-4 lg:hidden'>
                 <div>
                     <p className='text-[17px] text-main'>Durability</p>
                     <p className='text-[24px] text-main'>Take on the Elements</p>
