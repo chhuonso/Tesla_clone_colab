@@ -2,7 +2,7 @@ import React from 'react'
 import { links } from "../data"
 import { BsChatLeftDots } from 'react-icons/bs'
 // import Model3 from "./images/model-3.jpg"
-import Navbar from '../components/Navbar'
+import Navbar from './Navbar'
 const MainHeader = () => {
     return (
         <> 
