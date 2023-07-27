@@ -11,7 +11,13 @@ const MainHeader = () => {
             <p>Hi</p>
             <p>Hi</p>
             <h1>YO</h1>
+
+            <h3>NICE!</h3>
+            <h5>GOOD</h5>
+            <h2>AWESOME</h2>
+=======
             <h6>njfiajnksdajnkdsanjnsj</h6>
+
             {
                 links.map(({ title, price, subTitle, bgImg, leftBtn, rightBtn }, id) => {
                     return (
