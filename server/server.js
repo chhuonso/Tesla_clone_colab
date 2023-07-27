@@ -8,5 +8,7 @@ require("./config/mongoose.config");
 
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json(), cookies(), express.urlencoded({ extended: true }));
+const UserRoutes = require("./routes/user.routes")
+UserRoutes(app);
 
 app.listen(port, () => console.log(`Listening on port: ${port}`));

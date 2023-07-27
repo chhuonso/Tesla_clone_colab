@@ -50,16 +50,15 @@ const Installation = () => {
                 <div>
                     <video src={showVideo === 'Design' ? DesignVideo : InstallationVideo} controls autoPlay alt='hi'
                         style={{
-                            left: '0', // Set the left position to center the image horizontally
-                            // Set a larger height for small screens to zoom in
-                            objectFit: 'cover', // To maintain aspect ratio and fill the container
+                            left: '0',
+                            objectFit: 'cover',
                         }}
                         className='h-[300px] mt-20 lg:h-[570px] w-full lg:hidden' />
                     <div className='grid grid-cols-3 gap-5'>
-                        {carousel.map((video, index) => (
-                            <div key={index} className='col-span-3' onClick={() => handleVideoCarousel(video.videoType)}>
-                        {video.content}
-                    </div>
+                        {carousel.map((video, idx) => (
+                            <div key={idx} className='col-span-3' onClick={() => handleVideoCarousel(video.videoType)}>
+                                {video.content}
+                            </div>
                         ))}
                     </div>
                 </div>
