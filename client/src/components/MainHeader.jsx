@@ -8,7 +8,7 @@ const MainHeader = () => {
         <> 
         <div style={{}} className=''>
             <Navbar />
-
+            <h6>hi</h6>
             {
                 links.map(({ title, price, subTitle, bgImg, leftBtn, rightBtn }, id) => {
                     return (
