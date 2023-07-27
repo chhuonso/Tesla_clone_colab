@@ -10,6 +10,7 @@ const MainHeader = () => {
             <Navbar />
             <p>Hi</p>
             <p>Hi</p>
+            <h1>YO</h1>
             {
                 links.map(({ title, price, subTitle, bgImg, leftBtn, rightBtn }, id) => {
                     return (
