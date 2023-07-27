@@ -13,7 +13,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
       <Routes>
         <Route index element={<Home/>}/>
         <Route path='models' element={<ModelS/>}/>
