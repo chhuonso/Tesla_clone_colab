@@ -5,7 +5,9 @@ import React from 'react'
 import MainHeader from '../../components/MainHeader'
 const Home = () => {
   return (
-    <MainHeader/>
+    <div className='overscroll-auto'>
+      <MainHeader />
+    </div>
     // <div style={{ backgroundImage:`url(${Model3})` }} className='h-screen bg-cover bg-center'>
     // <div className='h-screen bg-cover bg-center'>
     //   <Navbar/>
