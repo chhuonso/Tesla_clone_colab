@@ -12,6 +12,7 @@ const MainHeader = () => {
             <p>Hi</p>
             <h1>YO</h1>
             <h3>NICE!</h3>
+            <h5>GOOD</h5>
             {
                 links.map(({ title, price, subTitle, bgImg, leftBtn, rightBtn }, id) => {
                     return (
