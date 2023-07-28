@@ -96,7 +96,7 @@ export const mainImg = [
     },
     {
         id: 5,
-        bgsrop: `${SP}`
+        bgdrop: `${SP}`
     },
     {
         id: 6,
