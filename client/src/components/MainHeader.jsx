@@ -8,6 +8,7 @@ const MainHeader = () => {
         <>
             <div style={{}} className='snap-y snap-mandatory h-screen overflow-scroll'>
                 <Navbar />
+                <h1>yo</h1>
                 {
                     links.map(({ title, price, subTitle, bgImg, leftBtn, rightBtn }, id) => {
                         return (
