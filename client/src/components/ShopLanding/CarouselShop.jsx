@@ -6,7 +6,10 @@ const CarouselShop = () => {
 
     const slides = [
         {
-            image: `${WallConnector}`
+            image: `${WallConnector}`,
+            // Need to add images into this
+            // srcSet: `${pass} ${pass}`
+            
         },
         {
             image: `${Clothes}`
