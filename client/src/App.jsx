@@ -8,6 +8,7 @@ import NotFound from "./pages/notFound/NotFound"
 import SolarPlanel from "./pages/solarPlanel/SolarPlanel";
 import SolarRoof from "./pages/solarRoof/SolarRoof";
 import Navbar from "./components/Navbar";
+import Register from "./pages/createAccount/Register";
 // import Navbar from "./components/Navbar";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='modely' element={<ModelY/>}/>
         <Route path='solarpanel' element={<SolarPlanel/>}/>
         <Route path='solarroof' element={<SolarRoof/>}/>
+        <Route path='account' element={<Register />}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>

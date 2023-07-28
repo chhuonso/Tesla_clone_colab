@@ -33,5 +33,5 @@ const StoreSchema = new mongoose.Schema({
     ]
 })
 
-const Store = mongoose.model('store', StoreSchema)
+const Store = mongoose.model('Store', StoreSchema)
 module.exports = Store
