@@ -29,6 +29,14 @@ const MainHeader = () => {
                         )
                     })
                 }
+                <div className='h-screen bg-cover bg-center flex flex-col justify-between snap-start' style={{ backgroundImage: `url(${Accessories2})` }} >
+                    <div className='relative text-center top-[15%]'>
+                        <h1 className='text-4xl font-bold '>Accessories</h1>
+                    </div>
+                    <div className='flex flex-col items-center gap-5 justify-center text-sm lg:flex-row md:flex-row relative'>
+                        <button className='bg-white rounded-md w-96 md:w-64 lg:mx-4 mt-2 h-10 text-[#393c41] p-2 relative top-[30%]'>Shop Now</button>
+                    </div>
+                </div>
             </div>
         </>
     )
