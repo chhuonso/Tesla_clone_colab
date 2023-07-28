@@ -35,6 +35,18 @@ const Installation = () => {
                 </>
             )
         },
+        {
+            videoType: 'Install',
+            content: (
+                <>
+                    <span className='w-[300px] border-2 border-black mt-10'></span>
+                    <div className='flex flex-col'>
+                        <p>Design</p>
+                        <p className='mt-3'>Aerial imagery and 3D modeling determine your custom design</p>
+                    </div>
+                </>
+            )
+        },
     ]
 
     return (
@@ -54,10 +66,12 @@ const Installation = () => {
                             objectFit: 'cover',
                         }}
                         className='h-[300px] mt-20 lg:h-[570px] w-full lg:hidden' />
-                    <div className='grid grid-cols-3 gap-5'>
+                    <div className='flex flex-row w-[1900px]  gap-5'>
                         {carousel.map((video, idx) => (
-                            <div key={idx} className='col-span-3' onClick={() => handleVideoCarousel(video.videoType)}>
-                                {video.content}
+                            <div key={idx} className='w-[13%] snap-x snap-mandatory overflow-scroll' onClick={() => handleVideoCarousel(video.videoType)}>
+                                <div className='snap-start flex-shrink-0'>
+                                    {video.content}
+                                </div>
                             </div>
                         ))}
                     </div>
