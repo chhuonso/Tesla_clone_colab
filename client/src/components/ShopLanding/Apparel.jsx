@@ -1,15 +1,38 @@
 import React from 'react'
-import { links } from "../data"
-// import { BsChatLeftDots } from 'react-icons/bs'
-import Accessories2 from "../images/accessories2.jpg"
-import Navbar from './Navbar'
-const MainHeader = () => {
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import MensMobile from '../../images/shopImages/men_mobile.avif'
+import WomanMobile from '../../images/shopImages/women_mobile.avif'
+import KidMobile from '../../images/shopImages/Kids_mobile.avif'
+const Apparel = () => {
+    const apparelData = [
+        {
+            id: 1,
+            bgImg: `${MensMobile}`,
+            title: "Men's Apparel",
+            path: "/category/apparel/men",
+            btn: "Shop Now",
+        },
+        {
+            id: 2,
+            bgImg: `${WomanMobile}`,
+            title: "Men's Apparel",
+            path: "/category/apparel/woman",
+            btn: "Shop Now",
+        },
+        {
+            id: 3,
+            bgImg: `${KidMobile}`,
+            title: "Kid's Apparel",
+            path: "/category/apparel/kid",
+            btn: "Shop Now",
+        }
+    ]
     return (
         <>
             <div style={{}} className='snap-y snap-mandatory h-screen overflow-scroll'>
-                <Navbar />
                 {
-                    links.map(({ title, price, subTitle, bgImg, leftBtn, rightBtn }, id) => {
+                    apparelData.map(({ title, price, subTitle, bgImg, leftBtn, rightBtn }, id) => {
                         return (
                             <div key={id} style={{ backgroundImage: `url(${bgImg})` }} className='h-screen bg-cover bg-center flex flex-col justify-around snap-start'>
                                 <div className='relative text-center'>
@@ -28,7 +51,7 @@ const MainHeader = () => {
                         )
                     })
                 }
-                <div className='h-screen bg-cover bg-center flex flex-col justify-between snap-start' style={{ backgroundImage: `url(${Accessories2})` }} >
+                <div className='h-screen bg-cover bg-center flex flex-col justify-between snap-start' style={{ backgroundImage: `url(})` }} >
                     <div className='relative text-center top-[15%]'>
                         <h1 className='text-4xl font-bold '>Accessories</h1>
                     </div>
@@ -41,4 +64,4 @@ const MainHeader = () => {
     )
 }
 
-export default MainHeader
+export default Apparel

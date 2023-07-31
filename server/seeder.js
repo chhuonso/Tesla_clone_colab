@@ -1,7 +1,8 @@
-require('dotenv')
+require('dotenv').config()
 const mongoose = require('mongoose')
-const store = require('./data/store')
-
+const menApparelData = require('./data/men.js')
+const MenApparel = require('./models/men.model')
+const StoreApparel = require('./models/store.model')
 const uri = process.env.MONGO_DB_URI;
 
 mongoose.connect(uri, {
@@ -11,31 +12,19 @@ mongoose.connect(uri, {
 
     .then(() => {
         console.log('Established a connection to the database');
-        importProducts();
-        importArrarel()
+        importMenApparel()
     })
     .catch(err => console.log('Something went wrong when connecting to the database', err));
 
-const importApparel = async () => {
+const importMenApparel = async () => {
     try {
-        // Will delete the existing records before we insert
-        await Product.deleteMany();
-        // Inserting Product from my products data file
-        await Product.insertMany(apparel);
-        console.log('Data seeded successfully');
+        await MenApparel.deleteMany(); // Will delete the existing records before we insert
+        
+        await MenApparel.insertMany(menApparelData) // Inserting men's apparel data from "menApparelData"
+        console.log('Men\'s Apparel data seeded successfully')
     } catch (error) {
-        console.error('Error seeding data:', error);
+        console.error('Error seeding Men\'s Apparel data:', error)
     }
 };
 
-const importArrarel = async () => {
-    try {
-        // Will delete the existing records before we insert
-        await Apparel.deleteMany();
-        // Inserting Product from my products data file
-        await Apparel.insertMany(apparel);
-        console.log('Data seeded successfully');
-    } catch (error) {
-        console.error('Error seeding data:', error);
-    }
-};
+

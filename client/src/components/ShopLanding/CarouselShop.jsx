@@ -2,17 +2,18 @@ import React, { useState } from 'react'
 import FloorMats from '../../images/shopImages/Floormats_Banner_web.avif'
 import WallConnector from '../../images/shopImages/wall-connector-banner_web.avif'
 import Clothes from '../../images/shopImages/clothe-banner-web.avif'
+import MobileClothes from '../../images/shopImages/clothe_banner_mobile.avif'
 const CarouselShop = () => {
 
     const slides = [
         {
             image: `${WallConnector}`,
             // Need to add images into this
-            // srcSet: `${pass} ${pass}`
             
         },
         {
-            image: `${Clothes}`
+            image: `${Clothes}`,
+            srcSet: `${MobileClothes} 480w, ${Clothes} 1024w`
         },
         {
             image: `${FloorMats}`
