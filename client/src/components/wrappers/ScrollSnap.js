@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import tw from "tailwind-styled-components"
 
-const Wrapper = styled.aside `
+const Wrapper = tw.div `
     snap-y 
     snap-mandatory 
     h-screen 
