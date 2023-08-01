@@ -5,6 +5,7 @@ import MensMobile from '../../images/shopImages/men_mobile.avif'
 import WomanMobile from '../../images/shopImages/women_mobile.avif'
 import KidMobile from '../../images/shopImages/Kids_mobile.avif'
 import PrimaryButton from '../btn/LargePrimaryBtn'
+import Wrapper from '../wrappers/ScrollSnap'
 const Apparel = () => {
     const apparelData = [
         {
@@ -31,7 +32,7 @@ const Apparel = () => {
     ]
     return (
         <>
-            <div style={{}} className='snap-y snap-mandatory h-screen overflow-scroll'>
+            <Wrapper>
                 {
                     apparelData.map(({ title, price, subTitle, bgImg, btn }, id) => {
                         return (
@@ -48,7 +49,7 @@ const Apparel = () => {
                         )
                     })
                 }
-            </div>
+            </Wrapper>
         </>
     )
 }
